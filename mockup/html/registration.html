@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author" content="ISUX">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_注册</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/mayfle.css">
+</head>
+<body>
+<div class="reg">
+	<div class="ui-form">
+		<form action="#">
+			<div class="ui-form-item ui-border-b">
+				<input class="nopadding" type="text" placeholder="请输入您的手机号/美疯号" />
+				<a href="#" class="ui-icon-close">
+				</a>
+			</div>
+			<div class="ui-form-item">
+				<label for="#" id="btn1">
+					点击获取验证码
+				</label>
+				<input type="text" maxlength="4" placeholder="请输入验证码" />
+				<a href="#" class="ui-icon-close">
+				</a>
+			</div>
+			<div class="ui-form-item">
+				<label class="resand" for="#">
+					重新发送(30秒)
+				</label>
+				<input type="text" maxlength="4" placeholder="请输入验证码" />
+				<a href="#" class="ui-icon-close">
+				</a>
+			</div>
+			<div class="ui-form-item">
+				<label class="resandred" for="#" id="btn1">
+					重新发送
+				</label>
+				<input type="text" maxlength="4" placeholder="请输入验证码" />
+				<a href="#" class="ui-icon-close">
+				</a>
+			</div>
+		</form>
+	</div>
+	<div class="ui-list-text">
+		<label class="ui-checkbox ui-checkbox-s">
+			<input type="checkbox" name="checkbox" checked="" />
+			同意应用<a href="#">服务条款</a>与<a href="#">隐私条款</a>
+		</label>
+	</div>
+	<div class="ui-btn-wrap">
+		<button id="btn2" class="ui-btn-lg ui-btn-red">
+			下一步
+		</button>
+	</div>
+</div>
+
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/frozen.js"></script>
+<script type="text/javascript">
+var el,el2,el3;
+$("#btn1").tap(function(){
+	el=$.tips({
+		content:'验证码已发送',
+		stayTime:2000,
+		type:"success"
+	})
+	el.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+
+$("#btn2").tap(function(){
+	el2=$.tips({
+		content:'验证码错误',
+		stayTime:2000,
+		type:"info"
+	})
+	el2.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+$("#btn3").tap(function(){
+	el3=$.tips({
+		content:'温馨提示内容',
+		stayTime:2000,
+		type:"warn"
+	})
+	el3.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+</script>
+</body>
+
+</html>
+  

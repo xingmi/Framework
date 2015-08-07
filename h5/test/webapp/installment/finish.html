@@ -1,0 +1,19 @@
+<!DOCTYPE HTML><html><head><meta charset=utf-8><meta name=format-detection content="telephone=no"><meta name=viewport content="width=device-width, user-scalable=no"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=mayfleApi content="http://192.168.253.107/api/amiee/"><meta name=xiaodouApi content="http://192.168.253.107/api/finance/v2.0/"><meta name=H5BaseUrl content="http://192.168.253.107/h5/"><title>&#x7533;&#x8BF7;&#x7F8E;&#x4E3D;&#x5206;&#x671F;</title><link rel=stylesheet href=http://192.168.253.107/h5/css/all.css id=mayfleBaseCss></head><body><div class=staging><div class=ui-loading-wrap style=height:200px;><p>&#x7533;&#x8BF7;&#x5B8C;&#x6210;&#xFF01;<br>3&#x4E2A;&#x5DE5;&#x4F5C;&#x65E5;&#x5185;&#x6709;&#x7ED3;&#x679C;&#xFF0C;&#x8BF7;&#x7559;&#x610F;&#x77ED;&#x4FE1;&#x548C;&#x7535;&#x8BDD;&#x3002;</p></div><div style="text-align: center;"><span id=countdown>5</span><span>&#x79D2;&#x4E4B;&#x540E;&#x8DF3;&#x8F6C;&#x6211;&#x7684;&#x5206;&#x671F;...</span></div></div><script type=text/javascript src=/js/base/mayfle-min.js?v=20151111></script><script>
+    window.onload = function(){
+        var oCount = document.getElementById("countdown");
+        var n = 5;
+        var ua = navigator.userAgent.toLowerCase();
+        var timer = setInterval(function(){
+            n--;
+            oCount.innerHTML = n;
+            if(n == 0){
+                clearInterval(timer);
+                if( /iphone|ipad|ipod/.test(ua)){
+                    window.location.hash = "mayfle://webapp/redirect/show.html";
+                }else if(/android/.test(ua)){
+                    window.location.href = "mayfle://webapp/redirect/show.html";
+                }
+            }
+        },1000);
+    }
+</script></body></html>

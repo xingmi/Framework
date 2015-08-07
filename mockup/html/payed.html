@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author" content="ISUX">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_预约完成</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/mayfle.css">
+</head>
+<body class="payfor">
+<section class="ui-notice">
+	<h2>预约完成！</h2>
+	<p>我们的工作人员将与您电话确认</p>
+</section>
+<div class="paytxt">
+	
+	<ul class="ui-list ui-list-text mb-10">
+		<li class="ui-form-item ui-border-t ui-list-item-link" data-href="free_goods.html">
+			<label for="#">
+				项目名称
+			</label>
+			<p>无痕祛痘套餐，原价680元现在50元即可</p>
+		</li>
+		<li class="ui-form-item ui-border-t ui-list-item-link">
+			<label for="#">
+				服务机构
+			</label>
+			<p>机构名称机构名称机构名称机构名称</p>
+		</li>
+		<li class="ui-form-item">
+			<label for="#">
+				数量
+			</label>
+			<p>1</p>
+		</li>
+		<li class="ui-form-item">
+			<label for="#">
+				订单号
+			</label>
+			<p>123456789</p>
+		</li>
+		
+		<li class="ui-form-item ui-border-t">
+			<label for="#">
+				总价
+			</label>
+			<p>100</p>
+		</li>
+		<li class="ui-form-item ui-border-t">
+			<label for="#">
+				预约价额
+			</label>
+			<p><span>0</span></p>
+		</li>
+	</ul>
+</div>
+
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/frozen.js"></script>
+<script type="text/javascript">
+var el,el2,el3;
+$("#btn1").tap(function(){
+	el=$.tips({
+		content:'验证码已发送',
+		stayTime:2000,
+		type:"success"
+	})
+	el.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+
+$("#btn2").tap(function(){
+	el2=$.tips({
+		content:'验证码错误',
+		stayTime:2000,
+		type:"info"
+	})
+	el2.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+$("#btn3").tap(function(){
+	el3=$.tips({
+		content:'温馨提示内容',
+		stayTime:2000,
+		type:"warn"
+	})
+	el3.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+
+
+$('.ui-list-text li').click(function(){
+	location.href= $(this).data('href');
+});
+
+</script>
+</body>
+
+</html>
+  

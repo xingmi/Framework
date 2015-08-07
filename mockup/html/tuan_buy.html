@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author" content="ISUX">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_订单确认</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/mayfle.css">
+</head>
+<body>
+<header><a href="javascript:()" onClick="javascript :history.back(-1);"><</a>订单确认</header>
+<div class="free-buy head-body">
+	<div class="ui-form mb-10">
+		<div class="ui-form-item ui-border-b">
+			<label for="#">
+				项目
+			</label>
+			<p>无痕祛痘套餐，原价680元现在50元即</p>
+		</div>
+		<div class="ui-form-item ui-border-b">
+			<label for="#">
+				商家
+			</label>
+			<p>商家名字商家名字商家名字商家名字</p>
+		</div>
+		<div class="ui-form-item ui-border-b">
+			<label for="#">
+				数量
+			</label>
+			<p class="ui-number">
+				<a class="decrease disabled">-</a>
+				<span class="num">1</span>
+				<a class="increase">+</a>
+			</p>
+		</div>
+		<div class="ui-form-item">
+			<label for="#">
+				总价
+			</label>
+			<p><span>100</span></p>
+		</div>
+	</div>
+	<p class="title mb-10">个人信息<p>
+	<div class="ui-form mb-10">
+		<form action="#">
+			<div class="ui-form-item ui-border-b">
+				<label for="#" id="btn2">
+					真实姓名
+				</label>
+				<input type="text" placeholder="必须填写">
+				<a href="#" class="ui-icon-close">
+				</a>
+			</div>
+			<div class="ui-form-item">
+				<label for="#" id="btn3">
+					手机号
+				</label>
+				<input type="text" maxlength="11" placeholder="必须填写">
+				<a href="#" class="ui-icon-close">
+				</a>
+			</div>
+		</form>
+	</div>
+	<p class="title text-center">随时退款·过期退款·免预约<p>
+	<div class="ui-btn-wrap">
+		<button class="ui-btn-lg ui-btn-red" onclick="location.href='pay.html'">
+			提交订单
+		</button>
+	</div>
+</div>
+
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/frozen.js"></script>
+<script type="text/javascript">
+var el,el2,el3;
+$("#btn1").tap(function(){
+	el=$.tips({
+		content:'验证码已发送',
+		stayTime:2000,
+		type:"success"
+	})
+	el.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+
+$("#btn2").tap(function(){
+	el2=$.tips({
+		content:'请填写真实姓名',
+		stayTime:2000,
+		type:"info"
+	})
+	el2.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+$("#btn3").tap(function(){
+	el3=$.tips({
+		content:'请填写正确的手机号',
+		stayTime:2000,
+		type:"warn"
+	})
+	el3.on("tips:hide",function(){
+		console.log("tips hide");
+	})
+
+});
+</script>
+</body>
+
+</html>
+  

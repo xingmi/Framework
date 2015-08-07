@@ -1,0 +1,104 @@
+@@include('../partial/header.html', {
+    "title": "美疯啦众筹"
+})
+
+<div class="crowdfunding">
+    <div id="banner"></div>
+    <h2>———— 精品项目 ————</h2>
+    <div class="crowtab ui-tab">
+        <ul class="ui-tab-nav ui-border-b">
+            <li class="current nav-tab">最新上线</li>
+            <li class="nav-tab">预热中</li>
+            <li class="nav-tab">人气最旺</li>
+        </ul>
+        <ul class="ui-tab-content" id="crowdfundingList">
+            <li class="content1 display-none display-block"></li>
+            <li class="content2 display-none"></li>
+            <li class="content3 display-none"></li>
+        </ul>
+    </div>
+    <div id="case"></div>
+</div>
+
+<script type="text/template" id="bannerTemplate">
+    <% if (data.items.length) { %>
+        <div class="ui-slider mb-10">
+            <ul class="ui-slider-content" id="scroller_imglist">
+                <% _.each(data.items,function(item){ %>
+                    <li class="toImageUrl" data-type="<%= item.targetId %>" data-ptype="<%= item.ptype %>" data-url="<%= item.url %>" data-target="<%= item.target %>">
+                        <img src="<%= item.pic %>">
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <% } %>
+</script>
+
+
+<script type="text/template" id="crowdfundingTemplate">
+<% if(datas.items.length > 0){%>
+<% _.each(datas.items,function(detail){ %>
+        <ul class="ui-list ui-border-b">
+
+            <li>
+                <a href="" class="toCrowdfundingDetail" data-id="<%= detail.id %>">
+                    <img  src="<%= detail.image %>">
+                </a>
+                <ul class="ui-grid-trisect ui-border-b">
+                    <li>
+                        <h4><%= detail.percentage %>%</h4>
+
+                        <p>进行中</p>
+                    </li>
+                    <li>
+                        <h4><span>&yen;</span><%= detail.complete_amount %></h4>
+                        <p>已筹集</p>
+                    </li>
+                    <li>
+                        <h4>
+                            <% if (detail.days > 0) { %>
+                                <%= detail.days %><span>天</span>
+                            <% }else{ %> 
+                                <%= Mayfle.formatTime(detail.seconds) %>
+                            <% } %>
+                        </h4>
+                        <p>剩余时间</p>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+<% }) %>
+<div class="ui-loading-wrap show-more-product" data-index="<%= index %>" data-count="0" >
+    <a href="#"><i class="fa arrow-down"></i>查看更多</a>
+</div>
+<% } %>
+</script>
+
+
+<script type="text/template" id="caseTemplate">
+    <ul class="ui-list ui-border-tb mb-0">
+        <% _.each(items,function(item){ %>
+            <li class="ui-border-t" data-id="<%= item.id %>">
+                <div class="ui-list-img">
+                    <img src="<%= item.image %>">
+                </div>
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap"><%= item.title %></h4>
+                    <p class="ui-nowrap">预计人数：<span><%= item.total_count %></span></p>
+                    <p class="ui-nowrap">实际人数：<span><%= item.count %></span></p>
+                    <p class="ui-nowrap">
+                        筹款金额：
+                        <span><i>&yen;</i> <%= item.total_amount %></span>
+                    </p>
+                </div>
+            </li>
+        <% })%>
+        
+    </ul>
+</div>
+</script>
+
+@@include('../partial/footer.html',{
+    "controller" : "crowdfundingController"
+})

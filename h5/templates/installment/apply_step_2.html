@@ -1,0 +1,187 @@
+@@include('../partial/header.html', {
+    "title": "申请美丽分期"
+})
+
+
+
+
+<script type="text/template" id="template1">
+<div class="staging">
+    <div class="ui-tab">
+        <ul class="ui-tab-nav ui-border-b">
+            <li class="current" style="margin:0;">学生</li>
+            <li  style="margin:0;">白领</li>
+        </ul>
+        <ul class="ui-tab-content">
+            <li>
+                <form action="" method="get" id="form1">
+                <ul class="ui-list ui-list-text mt-10 mb-0">
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            学校
+                        </label>
+                        <input type="text" placeholder="学校" name="school" id="schoolName">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            专业
+                        </label>
+                        <input type="text" placeholder="专业" name="profession"  id="professionName">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            毕业时间
+                        </label>
+                        <input type="tel"  placeholder="例如:20150701"  name="graduation_time" id="graduationTime" class="graduationTime">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            宿舍地址
+                        </label>
+                        <input type="text" placeholder="输入宿舍地址" name="dormitory[address]" id="dormitoryAddress">
+                    </li>
+                    <li class="ui-form-item ui-border-t block" >
+                        <label for="#">
+                            宿舍电话
+                        </label>
+                        <input type="tel" placeholder="输入宿舍电话" name="dormitory[telephone]" id="dormitoryTelephone">
+                    </li>
+                    <li class="ui-form-item ui-border-t block" >
+                        <label for="#">
+                            家长姓名
+                        </label>
+                        <input type="text" placeholder="输入家长姓名" name="parent[name]" id="parentName">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            家长电话
+                        </label>
+                        <input type="tel" placeholder="输入家长电话" name="parent[telephone]"id="parentTelephone">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            辅导员姓名
+                        </label>
+                        <input type="text" placeholder="输入辅导员姓名" name="instructor[name]">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            辅导员电话
+                        </label>
+                        <input type="tel" placeholder="输入辅导员电话" name="instructor[telephone]">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            同学姓名
+                        </label>
+                        <input type="text" placeholder="输入同学姓名" name="classmate[name]">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            同学电话
+                        </label>
+                        <input type="tel" placeholder="输入同学电话" name="classmate[telephone]">
+                    </li>
+                </ul>
+                <ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+                    <li>
+                        <a class="ui-btn-lg ui-btn-danger next_step step2" id="getForm1Data">
+                            下一步
+                        </a>
+                    </li>
+                </ul>
+                </form>
+            </li>
+            <li>
+                <form action="" method="get" id="form2">
+                <ul class="ui-list ui-list-text mt-10 mb-0">
+                    <li class="ui-form-item ui-border-t">
+                        <label for="#">
+                            学历
+                        </label>
+                        <input type="text" placeholder="学历" name="education" id="education">
+                    </li>
+                    <li class="ui-form-item ui-border-t">
+                        <label for="#">
+                            公司名
+                        </label>
+                        <input type="text" placeholder="公司名" name="company_name" id="companyName">
+                    </li>
+                    <li class="ui-form-item ui-border-t">
+                        <label for="#">
+                            公司地址
+                        </label>
+                        <input type="text" placeholder="输入公司地址" name="company_addr" id="companyAddr">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            公司固话
+                        </label>
+                        <input type="tel" placeholder="例如:021-88888888" name="company_tel" id="companyTel">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            职位
+                        </label>
+                        <input type="text" placeholder="输入职位" name="position" id="position">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            常用信用卡
+                        </label>
+                        <input type="tel" maxlength="18" placeholder="输入常用信用卡卡号" name="credit_card" id="creditCard">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            直系亲属姓名
+                        </label>
+                        <input type="text" placeholder="输入直系亲属姓名" name="family[name]" id="familyName">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            直系亲属电话
+                        </label>
+                        <input type="tel" placeholder="输入直系亲属电话" name="family[telephone]" id="familyTelephone">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            直系亲属地址
+                        </label>
+                        <input type="text" placeholder="输入直系亲属地址" name="family[address]" id="familyAddress">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            紧急联系人姓名
+                        </label>
+                        <input type="text" placeholder="输入紧急联系人姓名" name="emergency_concat[name]" id="emergencyConcatName">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            紧急联系人电话
+                        </label>
+                        <input type="tel" placeholder="输入紧急联系人电话" name="emergency_concat[telephone]" id="emergencyConcatTel">
+                    </li>
+                    <li class="ui-form-item ui-border-t block">
+                        <label for="#">
+                            紧急联系人地址
+                        </label>
+                        <input type="text" placeholder="输入紧急联系人地址" name="emergency_concat[address]" id="emergencyConcatAddress">
+                    </li>
+                </ul>
+                <ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+                    <li>
+                        <a class="ui-btn-lg ui-btn-danger next_step step2" id="getForm2Data">
+                            下一步
+                        </a>
+                    </li>
+                </ul>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+</script>
+
+@@include('../partial/footer.html',{
+    "controller" : "installmentController"
+})

@@ -1,0 +1,56 @@
+@@include('../partial/header.html', {
+    "title": "申请美丽分期"
+})
+<script type="text/template" id="template1">
+<div class="staging">
+    <form action="" method="get" id="form3">
+    <ul class="ui-list ui-list-text mt-10 mb-0" id="orderCode">
+        <li class="ui-form-item ui-border-t">
+            <label for="#">
+                订单编号
+            </label>
+            <input type="hidden" name="orderId" id="orderId">
+            <input type="text" placeholder="订单编号" name="order_code" id="order_code">
+        </li>
+    </ul>
+    <ul class="ui-list ui-list-text mt-10 mb-0">
+        <li class="ui-form-item ui-border-t block">
+            <label for="#">
+                机构名称
+            </label>
+            <input type="text" placeholder="机构名称" name="organization_name" id="organizationName">
+        </li>
+        <li class="ui-form-item ui-border-t block">
+            <label for="#">
+                项目
+            </label>
+            <input type="text" placeholder="项目" name="project_name" id="projectName">
+        </li>
+        <li class="ui-form-item ui-border-t block">
+            <label for="#">
+                机构电话
+            </label>
+            <input type="number" placeholder="机构电话" name="organization_phone" id="organizationPhone">
+        </li> 
+        <li class="ui-form-item ui-border-t block">
+            <label for="#">
+                申请金额
+            </label>
+            <input type="tel" placeholder="申请金额" name="loan_amount" id="loanAmount">
+        </li>
+    </ul>
+    <ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+        <li>
+            <a class="ui-btn-lg ui-btn-danger next_step step3">
+                立即申请
+            </a>
+        </li>
+    </ul>
+    </form>
+
+</div>
+</script>
+
+@@include('../partial/footer.html',{
+    "controller" : "installmentController"
+})

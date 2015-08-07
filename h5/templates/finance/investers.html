@@ -1,0 +1,26 @@
+@@include('../partial/header.html', {
+    "title": "加入记录"
+})
+
+<script type="text/template" id="template1">
+<div class="record">
+    <div class="bgf">
+        <h3>已参加人数 <span class="blue"><%= count %></span> 人<div>已加入金额 <span class="blue"><%= amount %></span> 元</div></h3>
+        <table class="ui-table">
+            <thead>
+                <tr><th>投资人</th><th>加入时间</th><th>加入金额</th></tr>
+            </thead>
+            <tbody>
+                <% _.each(items,function(invester){ %>
+                <tr><td><%= invester.name%></td><td><%= invester.investTime %></td><td><%= invester.amount %> 元</td></tr>
+                <% })%>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</script>
+
+@@include('../partial/footer.html',{
+    "controller" : "investerListController"
+})

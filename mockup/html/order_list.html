@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author" content="ISUX">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_订单列表</title>
+	<link rel="stylesheet" href="../css/mayfle.min.css">
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/mayfle.css">
+</head>
+<body>
+<header><a href="javascript:()" onClick="javascript :history.back(-1);"><</a>订单列表</header>
+<nav class="nav_tuan head-body">
+	<ul class="ui-tab-nav tab-top">
+		<li class="current">全部</li>
+		<li>待付款</li>
+		<li>未使用</li>
+		<li>待评价</li>
+		<li>待退款</li>
+	</ul>
+</nav>
+
+<div class="order_list">
+	<ul class="ui-list ui-list-text">  
+		<li class="ui-list-item-link" data-href="order_pay.html">
+			<p>店铺名称店铺名称店铺名称店铺名称店铺名称</p>
+			<p class="state">待付款</p>
+        </li>
+		<li class="ui-border-t" data-href="order_pay.html">
+			<div class="ui-list-img">
+			   <img src="http://www.mayfle.com/img/tip/mayfle01.png" alt="名" title="名">
+			</div>
+			<div class="ui-list-info">
+				
+				<h4>无痕袪痘套餐，原价680元现在45元，超值回馈。</h4>
+				<p>
+					<span>数量：1</span>
+					<span>总价：99999</span>
+				</p>
+			</div>
+			<div class="price">&yen; 999999</div>
+			<div class="pay">付款</div>
+		</li>
+	</ul>
+	<ul class="ui-list ui-list-text">  
+		<li class="ui-list-item-link" data-href="order_appraise.html">
+			<p>店铺名称</p>
+			<p class="state">待评价</p>
+        </li>
+		<li class="ui-border-t" data-href="order_appraise.html">
+			<div class="ui-list-img">
+			   <img src="http://www.mayfle.com/img/tip/mayfle01.png" alt="名" title="名">
+			</div>
+			<div class="ui-list-info">
+				
+				<h4>无痕袪痘套餐</h4>
+				<p>
+					<span>数量：1</span>
+					<span>总价：99999</span>
+				</p>
+			</div>
+			<div class="price">&yen; 999999</div>
+			<div class="assess">评价</div>
+		</li>
+	</ul>
+	<ul class="ui-list ui-list-text">  
+		<li class="ui-list-item-link" data-href="order_payments.html">
+			<p>店铺名称</p>
+			<p class="state">未使用</p>
+        </li>
+		<li class="ui-border-t" data-href="order_payments.html">
+			<div class="ui-list-img">
+			   <img src="http://www.mayfle.com/img/tip/mayfle01.png" alt="名" title="名">
+			</div>
+			<div class="ui-list-info">
+				
+				<h4>无痕袪痘套餐</h4>
+				<p>
+					<span>数量：1</span>
+					<span>总价：99999</span>
+				</p>
+			</div>
+			<div class="price">&yen; 999999</div>
+		</li>
+	</ul>
+	<div class="ui-loading-wrap">
+		<p>加载中</p>
+		<i class="ui-loading"></i>
+	</div>
+</div>
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/frozen.js"></script>
+<script>
+  $('.ui-list li').click(function(){
+	location.href= $(this).data('href');
+  });
+</script>
+</body>
+
+</html>
+
+
+  

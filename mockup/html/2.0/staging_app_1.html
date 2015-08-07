@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_美丽分期</title>
+    <link rel="stylesheet" href="../../css/frozen.css">
+	<link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/mayfle.css">
+</head>
+<body>
+<div class="staging">
+	<div class="ui-tab">
+		<ul class="ui-tab-nav ui-border-b">
+			<li class="current">学生</li>
+			<li>白领</li>
+		</ul>
+		<ul class="ui-tab-content">
+			<li>
+				<ul class="ui-list ui-list-text mt-10 mb-0">
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							姓名
+						</label>
+						<input type="text" placeholder="姓名">
+					</li>
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							身份证
+						</label>
+						<input type="text" maxlength="18" placeholder="身份证号">
+					</li>
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							手机号
+						</label>
+						<input type="text" maxlength="11" placeholder="输入手机号码">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							住址
+						</label>
+						<input type="text" placeholder="学校地址/公司地址/家庭住址">
+					</li>
+					
+				</ul>
+				<ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+					<li class="block">
+						<p>身份证正反面</p>
+						<p>以下内容四选一：常用信用卡账单2期；水电煤账单3期；固话账单3期；房屋租赁合同。</p>
+					</li>
+					<ul class="ui-grid-trisect">
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span class="sfz"></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span class="sfzf"></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+					</ul>
+					<li>
+						<a class="ui-btn-lg ui-btn-danger">
+							下一步
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="ui-list ui-list-text mt-10 mb-0">
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							姓名
+						</label>
+						<div>张三</div>
+					</li>
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							身份证
+						</label>
+						<input type="text" placeholder="身份证号">
+					</li>
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							手机号
+						</label>
+						<input type="text" placeholder="输入手机号码">
+					</li>
+					<li class="ui-form-item ui-border-t">
+						<label for="#">
+							住址
+						</label>
+						<input type="text" placeholder="学校地址/公司地址/家庭住址">
+					</li>
+					
+				</ul>
+				<ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+					<li class="block">
+						<p>身份证正反面</p>
+						<p>以下内容四选一：常用信用卡账单2期；水电煤账单3期；固话账单3期；房屋租赁合同。</p>
+					</li>
+					<ul class="ui-grid-trisect">
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span class="sfz"></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span class="sfzf"></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="ui-grid-trisect-img">
+								<span></span>
+							</div>
+						</li>
+					</ul>
+					<li>
+						<a class="ui-btn-lg ui-btn-danger">
+							下一步
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script src="../../js/zepto.min.js"></script>
+<script src="../../js/frozen.js"></script>
+<script>
+var tab = new fz.Scroll('.ui-tab', {
+    role: 'tab',
+    //interval: 3000,
+    autoplay: false
+});
+tab.currentPage = 0;
+$(tab.nav.children[0]).removeClass('current');
+$(tab.nav.children[tab.currentPage]).addClass('current');
+tab.scrollTo(-tab.itemWidth*tab.currentPage,0);
+tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+    console.log(fromIndex, toIndex)
+});
+
+tab.on('scrollEnd', function() {
+    console.log('end')
+});  
+</script>
+</body>
+
+</html>
+  

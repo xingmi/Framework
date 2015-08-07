@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_美金融</title>
+    <link rel="stylesheet" href="../../css/frozen.css">
+	<link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/mayfle.css">
+</head>
+<body>
+<div class="finance">
+	<div class="ui-slider mb-10">
+		<ul class="ui-slider-content" id="scroller_imglist">
+			<li><img src="http://www.mayfle.com/img/tip/mayfle03.png" alt="上海伊美尔港华整形医院" title="上海伊美尔港华整形医院"></li>
+			<li><img src="http://www.mayfle.com/img/tip/mayfle07.png" alt="上海瑞康口腔，牙齿美白" title="上海瑞康口腔，牙齿美白"></li>
+			<li><img src="http://www.mayfle.com/img/tip/mayfle03.png" alt="上海伊美尔港华整形医院" title="上海伊美尔港华整形医院"></li>
+			<li><img src="http://www.mayfle.com/img/tip/mayfle07.png" alt="上海瑞康口腔，牙齿美白" title="上海瑞康口腔，牙齿美白"></li>
+		</ul>
+	</div>
+	<div class="bgf mb-10">
+		<h3>美分期</h3>
+		<ul class="ui-grid-trisect">
+			<li>
+				<h4><span class="pink">30000</span></h4>
+				<p>额度最高（元）</p>
+			</li>
+			<li>
+				<h4><span class="black">12</span></h4>
+				<p>分期期限（月）</p>
+			</li>
+			<li>
+				<button class="ui-btn pinkbtn">立即申请</button>
+			</li>
+		</ul>
+	</div>
+	<div class="bgf mb-10">
+		<h3>美丽宝</h3>
+		<ul class="ui-grid-halve">
+			<li>
+				<h5>美丽宝一号<span>2015002期</span></h5>
+			</li>
+			<li>
+				<h6>合约期限<span class="blue">12个月</span></h6>
+			</li>
+		</ul>
+		<ul class="ui-grid-trisect ui-border-b">
+			<li>
+				<h4><span class="blue">30000</span></h4>
+				<p>额度最高（元）</p>
+			</li>
+			<li>
+				<h4><span class="black">12</span></h4>
+				<p>分期期限（月）</p>
+			</li>
+			<li>
+				<a href="may_bao.html" class="ui-btn bluebtn">立即申购</a>
+			</li>
+		</ul>
+		<ul class="ui-grid-halve">
+			<li>
+				<h5>美丽宝一号<span>2015002期</span></h5>
+			</li>
+			<li>
+				<h6>合约期限<span class="blue">12个月</span></h6>
+			</li>
+		</ul>
+		<ul class="ui-grid-trisect">
+			<li>
+				<h4><span class="blue">30000</span></h4>
+				<p>额度最高（元）</p>
+			</li>
+			<li>
+				<h4><span class="black">12</span></h4>
+				<p>分期期限（月）</p>
+			</li>
+			<li>
+				<a href="may_bao.html" class="ui-btn bluebtn">立即申购</a>
+			</li>
+		</ul>
+	</div>
+	<div class="bgf mb-10">
+		<h3>众筹活动<a href="#">更多众筹 ＞</a></h3>
+		<a href="#"><img src="http://wechat.xiaodoue.com/amiee-wx/activities/17/img/banner.jpg"></a>
+	</div>
+	<div class="bgf mb-10">
+		<a href="#"><img src="http://wechat.xiaodoue.com/amiee-wx/activities/17/img/banner.jpg"></a>
+	</div>
+	<div class="bgf mb-10">
+		<a href="#"><img src="http://wechat.xiaodoue.com/amiee-wx/activities/17/img/banner.jpg"></a>
+	</div>
+</div>
+<script src="../../js/zepto.min.js"></script>
+<script src="../../js/frozen.js"></script>
+<script>
+window.addEventListener('load', function(){
+
+	var slider = new fz.Scroll('.ui-slider', {
+		role: 'slider',
+		indicator: true,
+		autoplay: true,
+		interval: 5000
+	});
+
+	slider.on('beforeScrollStart', function() {
+		console.log('start')
+	});
+
+	slider.on('scrollEnd', function() {
+		console.log('end')
+	});
+})
+
+</script>
+</body>
+
+</html>
+  

@@ -1,0 +1,87 @@
+@@include('../partial/header.html', {
+    "title": "美丽宝"
+})
+
+<script type="text/template" id="template1">
+<div class="meilibao">
+    <div class="bgf mb-10">
+        <h3><%= name %><span><%= subtitle %></span></h3>
+        <ul class="ui-grid-trisect">
+            <li>
+                <h4><span class="blue"><%= refund_amount %></span></h4>
+                <p>收益（元）</p>
+            </li>
+            <li>
+                <h4><span class="black"><%= term %>个月</span></h4>
+                <p>合约期限（月）</p>
+            </li>
+            <li class="center">
+                <div class="circle">
+                    <div class="pie_left"><div class="left" style="-webkit-transform: rotate(<%= rotate2 %>deg);transform: rotate(<%= rotate2 %>deg);"></div></div>
+                    <div class="pie_right"><div class="right" style="-webkit-transform: rotate(<%= rotate1 %>deg);transform: rotate(<%= rotate1 %>deg);"></div></div>
+                    <div class="mask"><span><%= proportion %></span>%</div>
+                </div>
+            </li>
+        </ul>
+        <h5>计划募集金额  <%= formatTotalAmount %> 元<div>还需金额 <span class="blue"><%= formatResiduaAmount %></span> 元</div></h5>
+    </div>
+    <ul class="ui-list ui-list-text">
+        <li class="ui-border-t">
+            <p><span class="mfbtit">保障范围</span>
+                <% if(indemnification && indemnification.split("")[0] == 1) {%>
+                <span class="mfbtab"> <i>本</i></span>
+                <% } %>
+                <% if(indemnification && indemnification.split("")[1] == 1) {%>
+                <span class="mfbtab"><i>息</i></span>
+                <% } %>
+            </p>
+        </li>
+        <li class="ui-border-t">
+            <p class="ui-nowrap"><span class="mfbtit">保障方式</span>参见<a href="#" class="toPlayDetail">保障计划</a></p>
+        </li>
+        <li class="ui-border-t">
+            <p class="ui-nowrap"><span class="mfbtit">退出方式</span><%= redemption_way %></p>
+        </li>
+        <li class="ui-border-t">
+            <p class="ui-nowrap"><span class="mfbtit">收益方式</span><%= profit_type %></p>
+        </li>
+    </ul>
+    <ul class="ui-list ui-list-text">
+        <li class="ui-border-b">
+            <p>产品介绍</p>
+        </li>
+        <li>
+            <div class="text-hid-3"><%= description %></div>
+        </li>
+        <li>
+            <% if(description && description.length > 72){ %>
+            <p class="text-right"><a href="#" class="moreIntro">展开全部<i class="fa down"></i></a></p>
+            <% } %>
+        </li>
+    </ul>
+    <ul class="ui-list ui-list-text">
+        <li class="ui-border-b">
+            <p>费率说明</p>
+        </li>
+        <li>
+            <div class="text-hid-3"><%= fee_rates %></div>
+        </li>
+        <li>
+            <% if(fee_rates && fee_rates.length > 72){ %>
+            <p class="text-right"><a href="#" class="moreIntro">展开全部<i class="fa down"></i></a></p>
+            <% } %>
+        </li>
+    </ul>
+    <a href="" class="ui-list ui-list-text ui-list-link" id="investers" data-count="<%= invester_count %>" data-amount="<%= +total_amount - +residual_amount %>">
+        <h4 class="ui-nowrap">加入记录</h4>
+    </a>
+    <button class="ui-btn-lg ui-btn-danger mb-10" id="buyNow" data-amount="<%= amount %>">
+        立即抢购
+    </button>
+</div>
+
+</script>
+
+@@include('../partial/footer.html',{
+    "controller" : "meilibaoDetailController"
+})

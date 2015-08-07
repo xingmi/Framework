@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mayfleApi" content="http://api.mayfle.com/v2/amiee/">
+    <meta name="xiaodouApi" content="http://api.mayfle.com/v2/finance/v2.0/">
+    <meta name="H5BaseUrl" content="http://192.168.101.215:3000/">
+
+    <title>美疯啦社区</title>
+    <link rel="stylesheet" href="/css/all.css" id="mayfleBaseCss">
+</head>
+<body>
+<style>
+    svg{margin: 100px}
+    body{background: #760F71;}
+    path:hover{
+        fill: #8F2FD0;
+    }
+    .drawing path{
+       
+    }
+    .drawing path:nth-of-type(2){
+        transform-origin: left bottom;
+        transform:rotate(-36deg);
+    }
+    .drawing path:nth-of-type(3){
+        transform-origin: left center;
+        transform:rotate(-72deg);
+    }
+    .drawing path:nth-of-type(4){
+        transform-origin: left top;
+        transform:rotate(-108deg);
+    }
+    .drawing path:nth-of-type(5){
+        transform-origin: left top;
+        transform:rotate(-144deg);
+    }
+    .drawing path:nth-of-type(6){
+        transform-origin: right top;
+        transform:rotate(-180deg);
+    }
+    .drawing path:nth-of-type(7){
+        transform-origin: right top;
+        transform:rotate(-216deg);
+    }
+    .drawing path:nth-of-type(8){
+        transform-origin: right center;
+        transform:rotate(-252deg);
+    }
+    .drawing path:nth-of-type(9){
+        transform-origin: right bottom;
+        transform:rotate(-288deg);
+    }
+    .drawing path:nth-of-type(10){
+        transform-origin: right bottom;
+        transform:rotate(-324deg);
+    }
+    .drawing.trans path{
+        -webkit-transform:transition3d(0,0,0);
+        -webkit-animation-name : 'mymove';
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .drawing.trans path:nth-of-type(2){
+        -webkit-animation-duration : .2s;
+    }
+    .drawing.trans path:nth-of-type(3){
+        -webkit-animation-duration : .4s;
+    }
+    .drawing.trans path:nth-of-type(4){
+        -webkit-animation-duration : .6s;
+    }
+    .drawing.trans path:nth-of-type(5){
+        -webkit-animation-duration : .8s;
+    }
+    .drawing.trans path:nth-of-type(6){
+        -webkit-animation-duration : 1s;
+    }
+    .drawing.trans path:nth-of-type(7){
+        -webkit-animation-duration : 1.2s;
+    }
+    .drawing.trans path:nth-of-type(8){
+        -webkit-animation-duration : 1.4s;
+    }
+    .drawing.trans path:nth-of-type(9){
+        -webkit-animation-duration : 1.6s;
+    }
+    .drawing.trans path:nth-of-type(10){
+        -webkit-animation-duration : 1.8s;
+    }
+    
+    @keyframes mymove{
+        100%{
+            transform: rotate(0);
+        }
+    }
+
+</style>
+
+<div id="drawing" class="drawing">
+
+</div>
+
+<canvas id="pieCanvas" height="500px" width="500px">
+    
+</canvas>
+
+<script type="text/javascript" src="/js/base/mayfle-min.js" data-main=snsIndexController id="mayfleBaseJs"></script>
+
+</body>
+</html>
+
+  

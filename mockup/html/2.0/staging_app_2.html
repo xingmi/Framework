@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_美丽分期</title>
+    <link rel="stylesheet" href="../../css/frozen.css">
+	<link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/mayfle.css">
+</head>
+<body>
+<div class="staging">
+	<div class="ui-tab">
+		<ul class="ui-tab-nav ui-border-b">
+			<li class="current">学生</li>
+			<li>白领</li>
+		</ul>
+		<ul class="ui-tab-content">
+			<li>
+				<ul class="ui-list ui-list-text mt-10 mb-0">
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							学校
+						</label>
+						<input type="text" placeholder="学校">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							专业
+						</label>
+						<input type="text" maxlength="18" placeholder="专业">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							入学时间
+						</label>
+						<input type="text" maxlength="11" placeholder="入学时间">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							宿舍地址
+						</label>
+						<input type="text" placeholder="宿舍地址">
+					</li>
+				</ul>
+				<ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+					<li>
+						<a class="ui-btn-lg ui-btn-danger">
+							下一步
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="ui-list ui-list-text mt-10 mb-0">
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							学校
+						</label>
+						<input type="text" placeholder="学校">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							专业
+						</label>
+						<input type="text" maxlength="18" placeholder="专业">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							入学时间
+						</label>
+						<input type="text" maxlength="11" placeholder="入学时间">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							宿舍地址
+						</label>
+						<input type="text" placeholder="宿舍地址">
+					</li>
+					<li class="ui-form-item ui-border-t block">
+						<label for="#">
+							紧急联系人电话
+						</label>
+						<input type="text" placeholder="紧急联系人电话">
+					</li>
+				</ul>
+				<ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+					<li>
+						<a class="ui-btn-lg ui-btn-danger">
+							下一步
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script src="../../js/zepto.min.js"></script>
+<script src="../../js/frozen.js"></script>
+<script>
+var tab = new fz.Scroll('.ui-tab', {
+    role: 'tab',
+    //interval: 3000,
+    autoplay: false
+});
+tab.currentPage = 0;
+$(tab.nav.children[0]).removeClass('current');
+$(tab.nav.children[tab.currentPage]).addClass('current');
+tab.scrollTo(-tab.itemWidth*tab.currentPage,0);
+tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+    console.log(fromIndex, toIndex)
+});
+
+tab.on('scrollEnd', function() {
+    console.log('end')
+});  
+</script>
+</body>
+
+</html>
+  

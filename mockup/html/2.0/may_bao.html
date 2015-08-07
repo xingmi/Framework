@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_美丽宝</title>
+    <link rel="stylesheet" href="../../css/frozen.css">
+	<link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/mayfle.css">
+</head>
+<body>
+<div class="meilibao">
+	<div class="bgf mb-10">
+		<h3>美丽宝一号<span>2015002期</span></h3>
+		<ul class="ui-grid-trisect">
+			<li>
+				<h4><span class="blue">30000</span></h4>
+				<p>总收益（元）</p>
+			</li>
+			<li class="center">
+				<h4><span class="black">6个月</span></h4>
+				<p>合约期限（月）</p>
+			</li>
+			<li>
+					<div class="circle">
+						<div class="pie_left"><div class="left"></div></div>
+						<div class="pie_right"><div class="right"></div></div>
+						<div class="mask"><span>92</span>%</div>
+					</div>
+			</li>
+		</ul>
+		<h5>计划募集金额  200,000 元<div>还需要金额 <span class="blue">1000</span> 元</div></h5>
+	</div>
+	<ul class="ui-list ui-list-text">
+		<li class="ui-border-t">
+			<p><span class="mfbtit">保障范围</span><span class="mfbtab"> <i>本</i></span><span class="mfbtab"><i>息</i></span></p>
+		</li>
+		<li class="ui-border-t">
+			<p class="ui-nowrap"><span class="mfbtit">保障方式</span>参见<a href="#">保障计划</a></p>
+		</li>
+		<li class="ui-border-t">
+			<p class="ui-nowrap"><span class="mfbtit">退出方式</span>到期自动退出（183天合约期间）</p>
+		</li>
+		<li class="ui-border-t">
+			<p class="ui-nowrap"><span class="mfbtit">收益方式</span>到期自动退出</p>
+		</li>
+	</ul>
+	<ul class="ui-list ui-list-text">
+		<li class="ui-border-b">
+			<p>产品介绍</p>
+		</li>
+		<li>
+			<div class="text-hid-3" id="exp1">大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格
+				<table style="display:none;">
+					<tbody><tr>
+					<th>11</th>
+					<th>22</th>
+					<th>1331</th>
+					<th>1555</th>
+					</tr>
+					<tr>
+					<td>23234</td>
+				<td>232</td>
+				<td>43243</td>
+				<td>532432</td>
+				</tr>
+					<tr>
+					<td>23234</td>
+				<td>232</td>
+				<td>43243</td>
+				<td>532432</td>
+				</tr>
+				</tbody></table>
+			</div>
+
+		</li>
+		<li class="last">
+			<p class="text-right"><a id="strHref1" href="javascript:void(0)" onclick="showdiv(1)">展开全部 ∨</a></p>
+		</li>
+	</ul>
+	<ul class="ui-list ui-list-text">
+		<li class="ui-border-b">
+			<p>费率说明</p>
+		</li>
+		<li>
+			<div class="text-hid-3" id="exp">大段文字。
+				<table>
+					<tbody><tr>
+					<th>11</th>
+					<th>22</th>
+					<th>1331</th>
+					<th>1555</th>
+					</tr>
+					<tr>
+					<td>23234</td>
+				<td>232</td>
+				<td>43243</td>
+				<td>532432</td>
+				</tr>
+					<tr>
+					<td>23234</td>
+				<td>232</td>
+				<td>43243</td>
+				<td>532432</td>
+				</tr>
+				</tbody></table>
+				还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格大段文字，还有表格
+			</div>
+		</li>
+		<li class="last">
+			<p class="text-right"><a id="strHref" href="javascript:void(0)" onclick="showdiv()">展开全部 ∨</a></p>
+		</li>
+	</ul>
+	<a href="bao_record.html" class="ui-list ui-list-text ui-list-link">
+		<h4 class="ui-nowrap">加入记录</h4>
+	</a>
+	<button class="ui-btn-lg ui-btn-danger mb-10">
+        立即抢购
+    </button>
+	<button class="ui-btn-lg ui-btn-primary mb-10">
+        立即登录
+    </button>
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('.circle').each(function(index, el) {
+		var num = $(this).find('span').text() * 3.6;
+		if (num<=180) {
+			$(this).find('.right').css('transform', "rotate(" + num + "deg)");
+		} else {
+			$(this).find('.right').css('transform', "rotate(180deg)");
+			$(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+		};
+	});
+
+});
+
+window.onload = function showdiv(i){
+	document.getElementById("strHref").onclick = function(){
+		if( document.getElementById("exp").style.display == "block"){
+			document.getElementById("exp").style.display = "-webkit-box";	
+			document.getElementById("exp").querySelector("table").style.display = "none";
+			document.getElementById("strHref").innerHTML = "展开全部 ∨";
+		}else{
+		document.getElementById("exp").style.display = "block";
+		document.getElementById("exp").querySelector("table").style.display = "block";
+		document.getElementById("strHref").innerHTML = "收起全部 ∧";
+		}
+	}
+}
+
+</script>
+</body>
+
+</html>
+  

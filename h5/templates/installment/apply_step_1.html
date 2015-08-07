@@ -1,0 +1,59 @@
+@@include('../partial/header.html', {
+    "title": "申请美丽分期"
+})
+<script type="text/template" id="template1">
+<div class="staging">
+    <ul class="ui-list ui-list-text mt-10 mb-0">
+        <li class="ui-form-item ui-border-t">
+            <label for="#">
+                姓名
+            </label>
+            <input type="text" placeholder="姓名" id="userName">
+        </li>
+        <li class="ui-form-item ui-border-t">
+            <label for="#">
+                身份证
+            </label>
+            <input type="text" maxlength="18" placeholder="身份证号" id="userId">
+        </li>
+        <li class="ui-form-item ui-border-t">
+            <label for="#">
+                手机号
+            </label>
+            <input type="tel" maxlength="11" placeholder="输入手机号码" id="teleNumber">
+        </li>
+        <li class="ui-form-item ui-border-t block">
+            <label for="#">
+                住址
+            </label>
+            <input type="text" placeholder="学校地址/公司地址/家庭住址" id="homeLocation">
+        </li>
+        
+    </ul>
+    <ul class="ui-list ui-list-text bgf0 mt-10 mb-0">
+        <li class="block">
+            <p>身份证正反面</p>
+            <p>以下内容四选一：常用信用卡账单2期；水电煤账单3期；固话账单3期；房屋租赁合同。</p>
+        </li>
+        <ul class="ui-grid-trisect">
+            <% _(6).times(function(){ %>
+                <li class="upload_image">
+                    <div class="ui-grid-trisect-img">
+                        <span></span>
+                    </div>
+                </li>
+            <% }) %>
+            
+        </ul>
+        <li>
+            <a class="ui-btn-lg ui-btn-danger next_step step1">
+                下一步
+            </a>
+        </li>
+    </ul>
+</div>
+</script>
+
+@@include('../partial/footer.html',{
+    "controller" : "installmentController"
+})

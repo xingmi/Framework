@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/js/config/build.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/config/config.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controllers/finance/crowdfundingController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controllers/product/newProductController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/controllers/product/productItemController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/models/installment/installmentModel.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/product/item.html" charset="UTF-8" />
+  </component>
+</project>

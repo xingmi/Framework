@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mayfleApi" content="http://192.168.100.57:8080/api/amiee/">
+    <meta name="xiaodouApi" content="http://api.mayfle.com/v2/finance/v2.0/">
+    <meta name="H5BaseUrl" content="http://192.168.100.52:3000/">
+
+    <title>申请美丽分期</title>
+    <link rel="stylesheet" href="/css/all.css" id="mayfleBaseCss">
+</head>
+<body>
+<div class="staging">
+    <div class="ui-loading-wrap" style="height:200px;">
+        <p>申请完成！<br>3个工作日内有结果，请留意短信和电话。</p>
+    </div>
+    <div style="text-align: center;" >
+        <span id="countdown">5</span><span>秒之后跳转我的分期...</span>
+    </div>
+</div>
+<script type="text/javascript" src="/js/base/mayfle-min.js"></script>
+<script>
+    window.onload = function(){
+        var oCount = document.getElementById("countdown");
+        var n = 5;
+        var ua = navigator.userAgent.toLowerCase();
+        var timer = setInterval(function(){
+            n--;
+            oCount.innerHTML = n;
+            if(n == 0){
+                clearInterval(timer);
+                if( /iphone|ipad|ipod/.test(ua)){
+                    window.location.hash = "mayfle://webapp/redirect/show.html";
+                }else if(/android/.test(ua)){
+                    window.location.href = "mayfle://webapp/redirect/show.html";
+                }
+            }
+        },1000);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mayfleApi" content="http://192.168.100.57:8080/api/amiee/">
+    <meta name="xiaodouApi" content="http://api.mayfle.com/v2/finance/v2.0/">
+    <meta name="H5BaseUrl" content="http://192.168.100.52:3000/">
+
+    <title>加入记录</title>
+    <link rel="stylesheet" href="/css/all.css" id="mayfleBaseCss">
+</head>
+<body>
+
+<script type="text/template" id="template1">
+<div class="record">
+    <div class="bgf">
+        <h3>已参加人数 <span class="blue"><%= count %></span> 人<div>已加入金额 <span class="blue"><%= amount %></span> 元</div></h3>
+        <table class="ui-table">
+            <thead>
+                <tr><th>投资人</th><th>加入时间</th><th>加入金额</th></tr>
+            </thead>
+            <tbody>
+                <% _.each(items,function(invester){ %>
+                <tr><td><%= invester.name%></td><td><%= invester.investTime %></td><td><%= invester.amount %> 元</td></tr>
+                <% })%>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</script>
+
+<script type="text/javascript" src="/js/base/mayfle-min.js" data-main=investerListController id="mayfleBaseJs"></script>
+
+</body>
+</html>

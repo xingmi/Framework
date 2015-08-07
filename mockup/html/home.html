@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="author" content="ISUX">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>美疯啦_美业O2O电商平台_注册</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/mayfle.css">
+</head>
+<body class="home">
+<header><a href="javascript:()" onClick="javascript :history.back(-1);"><</a>个人中心</header>
+<section class="ui-notice head-body">
+	<!--登录后-->
+	<p><img alt="淡淡清风" src="http://www.mayfle.com/img/tip/head10.png"></p>
+	<p class="userid">用户名</p>
+	<!--end-->
+	<!--未登录--
+	<p class="userid">您好没登录哦~</p>
+	<button class="ui-btn ui-btn-red">
+		马上登录
+	</button>
+	<!--end-->
+</section>
+
+<ul class="ui-list ui-list-text">
+	<li class="ui-list-item-link" data-href="order_list.html">
+		<p>我的订单</p>
+		<span class="list-right">查看全部</span>
+	</li>
+	<li class="ui-border-b">
+		<div class="col-xs-3">
+			<i class="daifukuan"><span>1</span></i>
+			<p>待付款</p>
+		</div>
+		<div class="col-xs-3">
+			<i class="daishiyong"><span>99</span></i>
+			<p>待使用</p>
+		</div>
+		<div class="col-xs-3">
+			<i class="daipingjia"></i>
+			<p>待评价</p>
+		</div>
+		<div class="col-xs-3">
+			<i class="daishouhou"></i>
+			<p>退款/售后</p>
+		</div>
+	</li>
+	<li class="ui-list-item-link">
+		<p>消费保障</p>
+		<span class="list-right">先行赔付</span>
+	</li>
+</ul>
+<ul class="ui-list ui-list-text">
+	<li class="ui-border-b">
+		<p>我的积分</p>
+		<span>每消费一元获得一积分</span>
+		<span class="list-right font-right">积分：<b>700</b></span>
+		<!--未登录-->
+		<!--<span class="list-right font-right">请先登录</span>-->
+		<!--end-->
+	</li>
+	<li class="ui-list-item-link">
+		<p>代金券</p>
+	</li>
+</ul>
+
+<script src="../js/zepto.min.js"></script>
+<script>
+  $('.ui-list-text li').click(function(){
+	location.href= $(this).data('href');
+  });
+</script>
+</body>
+
+</html>
+  
